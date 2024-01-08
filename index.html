@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método Kite</title>
+  <meta charset="UTF-8">
+  <title>Página Principal</title>
 </head>
 <body>
-    <Header>
-<nav>
-    <a href="Roadmap.html">Roadmap</a> <a href="Simplificando.html">Simplificando</a> <a href="Sua-Conta.html">Sua Conta</a>
-</nav>
-        <div id="titulo">
-            Bem Vindo
-        </div>
-    </Header>
+  <h2>Bem-vindo</h2>
+  <p id="welcomeMessage"></p>
+
+  <script>
+    // Obtém o nome do usuário da localStorage
+    let username = localStorage.getItem('username');
+
+    // Exibe a mensagem de boas-vindas com o nome do usuário
+    document.getElementById('welcomeMessage').innerText = 'Bem-vindo, ' + username;
+
+    // Limpa o status de login para permitir que o usuário faça login novamente
+    localStorage.removeItem('loggedIn');
+  </script>
 </body>
 </html>
