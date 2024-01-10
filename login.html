@@ -2,90 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página de Login</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="input.css">
-
-<style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background-color: #2c2c2c;
-    }
-
-    form{
-      background-color: #5c5c5c;
-      border-radius: 3em;
-      border-color: rgb(145, 145, 202);
-      border-style: solid;
-      border: 4px;
-      display: flex;
-      align-items: center;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1></h1>
-        
-    </header>
-
-    <div>
-    <form action="index.html" method="post" >
-      
-      <div class="form">
-        <input class="input" placeholder="Type your text" required="" type="text">
-        <span class="input-border"></span>
-      </div>
-
-      <div class="form">
-        <input class="input" placeholder="Type your text" required="" type="text">
-        <span class="input-border"></span>
-      </div>
-
-    </form>
+  <header>
+    <div id="title">
+      <h1>Bem vindo</h1>
+      <h1>Ao Método Kite</h1>
     </div>
+    <ul>
+      <a href="#">Entrar</a></li>
+      <a href="#">Contatos</a></li>
+    </ul>
+  </header>
 
+  <main>
+    <aside>
+      <h2><span>Venha Ser Um</span></h2>
+      <h2>Aluno Kite</h2>
+      <p>
+        "Com o Método Kite, O Código Voa Alto <br> e As Soluções Se Tornam Uma Brisa"
+      </p>
+      <form>
+        <input type="text" placeholder="Nome">
+        <input type="text" placeholder="Senha">
+        <input type="submit" value="Enviar">
+      </form>
+    </aside>
+  
+    <article>
+      <img src="imagens/VETOR-login.png" alt="Vetor">
+    </article>
+  
+  </main>
 
-  <script>
-    // Verifica se o usuário já fez login
-    let hasLoggedIn = localStorage.getItem('loggedIn');
-
-    // Se já fez login, redireciona para a página principal
-    if (hasLoggedIn) {
-      window.location.href = 'index.html';
-    }
-
-    // Se não fez login, permite o envio do formulário
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Impede o envio padrão do formulário
-
-      // Obtém os valores dos campos
-      let name = document.getElementById('name').value;
-      let email = document.getElementById('email').value;
-      let password = document.getElementById('password').value;
-
-      // Verifica se a senha tem pelo menos 8 caracteres
-      if (password.length < 8) {
-        alert('A senha deve ter no mínimo 8 caracteres!');
-        return;
-      }
-
-      // Salva o nome na localStorage
-      localStorage.setItem('username', name);
-      
-      // Define que o usuário fez login
-      localStorage.setItem('loggedIn', 'true');
-
-      // Redireciona para a página principal
-      window.location.href = 'index.html';
-    });
-  </script>
 </body>
 </html>
